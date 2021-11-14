@@ -22,7 +22,7 @@ class CommandManager {
                         break;
                     }
 
-                    mp.gui.chat.push(`Гонка закончилась`)
+                    mp.gui.chat.push(`Гонка остановлена`)
                     RaceManager.stop()
                     break;
                 case "top":
@@ -34,15 +34,13 @@ class CommandManager {
                     }
 
                     TopManager.getTop(topType === "hot" ? 1 : 0, 10).forEach((e, i) => {
-                        mp.gui.chat.push(`Топ ${i}`)
+                        mp.gui.chat.push(`Топ ${i} - ${e}`)
                     })
                     break;
                 case "clear":
                     const clearType = args[1];
 
                     TopManager.clearTop(clearType === "hot" ? 1 : 0);
-
-
                     break;
                 case "restart":
                     mp.gui.chat.push(`Гонка перезапустилась`)

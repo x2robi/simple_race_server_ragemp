@@ -52,7 +52,7 @@ class RaceManager {
 
             TopManager.addLap(lastLap);
 
-            mp.gui.chat.push(`Круг занял ${Utils.formatLapTime(lastLap[0], lastLap[1])} времени!`)
+            mp.gui.chat.push(`Круг занял ${Utils.formatTime(lastLap[1] - lastLap[0])} времени!`)
 
             this.race.startLap();
         }

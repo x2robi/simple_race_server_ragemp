@@ -32,8 +32,8 @@ class Utils {
         return Math.abs(sqrt);
     }
 
-    formatLapTime(startDate, finishDate) {
-        const diffDate = new Date(finishDate - startDate);
+    formatTime(diffTime) {
+        const diffDate = new Date(diffTime);
 
         const hour = diffDate.getUTCHours();
         const minutes = diffDate.getUTCMinutes();
